@@ -1,0 +1,6 @@
+'code .' Abre visual studio code
+'git -h' Abre el manual de ayuda 
+'git --version' Visualiza la version de git
+'git status' Revisa el estado de el inicio de sesion
+'git add "archivo"' Agrega el archivo modificado a stage
+"git commit -m "Algo que haga sentido" '
