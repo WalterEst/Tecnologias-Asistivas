@@ -3,4 +3,7 @@
 'git --version' Visualiza la version de git
 'git status' Revisa el estado de el inicio de sesion
 'git add "archivo"' Agrega el archivo modificado a stage
-"git commit -m "Algo que haga sentido" '
+'git commit -m "Algo que haga sentido"'
+'git status -s' Muestra el estado actual sin mucho detalle
+'git log' Muestra los cambios realizados a detalle
+'git log --online' Muestra los cambios realizados sin muchi detalle y con hash
