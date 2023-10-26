@@ -1,0 +1,13 @@
+Negro sobre blanco
+Negro sobre amarillo
+Rojo sobre blanco
+Verde sobre blanco
+Blanco sobre Rojo
+Amarillo sobre negro
+Blanco sobre azul
+
+Negro: #000000
+Blanco: #F5F4F4
+Amarillo: #F3F978
+Rojo: #F55008
+Verde: #8EDC31
