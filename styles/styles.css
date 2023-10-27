@@ -1,3 +1,23 @@
+body{
+    background-image:url("/Imagenes/Fondo.png");
+    background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+.contenedor-titulos-index{
+
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10%;
+    margin-left: 5%;
+    float: left;
+    text-align: center;
+
+}
+
+
 .invertir-color {
     -webkit-filter: invert(100%);
    filter: invert(100%);
