@@ -14,11 +14,59 @@ body{
     margin-left: 5%;
     float: left;
     text-align: center;
-
 }
-
 
 .invertir-color {
     -webkit-filter: invert(100%);
    filter: invert(100%);
+}
+
+.formulario{
+    text-align: left;
+    margin: 0;
+    padding: 10px 0;
+    padding-left: 220;
+}
+
+.formulario label{
+    float: left;
+    text-align: right;
+    margin-left: 50px;
+    width: 200px;
+}
+
+.formulario input[type="text"]{
+    width: 220px;
+    margin-left: 20px;
+    border: 1px solid #000000;
+    background: transparent;
+}
+
+.formulario input[type="date"],
+.formulario input[type="number"]{
+    width: 100px;
+    margin-left: 20px;
+    border: 1px solid #000000;
+    background: transparent;
+}
+
+#botones {
+    margin-left: 230px;
+    text-align: left;
+}
+.formulario input[type="submit"] {
+    background-color: #1fc8d4;
+    color: #000000;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.formulario input[type="submit"]:hover {
+    background-color: #448ab9;
+}
+.formulario input[type="submit"]:active {
+    background-color: #003c80;
+    transform: scale(0.95);
 }
