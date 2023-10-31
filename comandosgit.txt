@@ -1,0 +1,28 @@
+ "ls" enlista archivos o carpetas dentro de un directorio
+"pwd" en que directorio o carpeta se encuentra
+"cd" mueve entre carpetas
+"cd .." salir o volver atrás
+"mkdir" crear nuevo directorio o carpeta
+"git init" inicializar con git
+"ls -a" muestras directorio o carpeta oculta
+"git add" agregar archivos-> etapa de stage(intermedia, identifica cambios)
+"git commit -m" -> etapa commit
+"git push origin" -> etapa final y el origin para saber el origen(server)
+
+"code ." visual code
+"git status"
+"rm" eliminar archivo
+"git restore --staged" restaurar
+"git restore" descartar cambios
+"mv" mover archivo
+"git mv" renombrar archivo
+"git diff" ver cambios
+"git log" ver historial detallado
+"git log --oneline" ver historial 
+"git branch" en que rama está
+"git checkout" crear rama
+"git switch nombre" mover a rama
+"cat" mostrar contenido
+"git merge" mover cambios a la rama main
+"git clone (link)" clona el repositorio de github
+"git pull" actualizar git - tira refresh(gualter)
