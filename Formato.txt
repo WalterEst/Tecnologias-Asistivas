@@ -1,0 +1,44 @@
+Negro sobre blanco
+Negro sobre amarillo
+Rojo sobre blanco
+Verde sobre blanco
+Blanco sobre Rojo
+Amarillo sobre negro
+Blanco sobre azul
+Azul sobre blanco
+Blanco sobre verde
+
+Negro: #000000
+Blanco: #F5F4F4
+Amarillo: #F3F978
+Rojo: #F55008
+Verde: #8EDC31
+Azul: #2C87C2
+
+Escala de grises
+
+#3c3c3c
+#515151
+#666666
+#8c8c8c
+#b5b5b5
+
+
+Para invertir colores en un div usaremose el siguiente codigo css
+
+.invertir-color {
+    -webkit-filter: invert(100%);
+   filter: invert(100%);
+}
+
+Tipo de letras:
+
+Verdana 
+Arial 
+Helvetica
+Sans Serif 
+
+Tamaño de letra:
+
+Parrafos 12, en html es 14px
+Titulos 14, en html es 16px
