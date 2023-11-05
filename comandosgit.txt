@@ -20,6 +20,7 @@
 "git log" ver historial detallado
 "git log --oneline" ver historial 
 "git branch" en que rama está
+"git branch -d <nombre_de_la_rama>" eliminar rama 
 "git checkout" crear rama
 "git switch nombre" mover a rama
 "cat" mostrar contenido
