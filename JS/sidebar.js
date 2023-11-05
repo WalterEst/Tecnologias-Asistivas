@@ -4,7 +4,7 @@ const menuItems = sidebar.querySelectorAll('a');
 const invertColorsButton = document.getElementById('invertColorsButton');
 const increaseFontSizeButton = document.getElementById('increaseFontSizeButton');
 const decreaseFontSizeButton = document.getElementById('decreaseFontSizeButton');
-const grayscaleButton = document.getElementById('grayscaleButton'); // Nuevo botón
+const grayscaleButton = document.getElementById('grayscaleButton'); 
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('open');
 });
