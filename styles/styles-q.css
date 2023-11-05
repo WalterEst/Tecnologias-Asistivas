@@ -57,12 +57,12 @@ body{
 
 .sidebar {
     background-color: #ffffff;
-    width: 250px;
-    height: 500px;
+    width: 200px;
+    height: 335px;
     position: fixed;
     border-radius: 14px;
     border: 1px solid #2C87C2;
-    top: 50px;
+    top: 100px;
     left: 0;
     transition: transform 0.3s ease-in-out; 
     transform: translateX(-250px); 
@@ -78,7 +78,7 @@ body{
 }
 
 .sidebar ul li {
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidebar ul li a {
