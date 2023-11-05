@@ -81,15 +81,19 @@ body{
     padding: 10px;
 }
 
-.sidebar ul li a {
+.sidebar ul li div {
     text-decoration: none;
     color: #000000;
     font-size: 16px;
 }
 
+.sidebar ul li div:hover {
+    cursor: pointer;
+}
+
 /* Estilos del botón */
 #toggleButton {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     background-color: #ffffff;
