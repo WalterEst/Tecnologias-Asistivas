@@ -1,10 +1,11 @@
-
 const sidebar = document.getElementById('sidebar');
 const toggleButton = document.getElementById('toggleButton');
 const menuItems = sidebar.querySelectorAll('a');
 const invertColorsButton = document.getElementById('invertColorsButton');
 const increaseFontSizeButton = document.getElementById('increaseFontSizeButton');
-const decreaseFontSizeButton = document.getElementById('decreaseFontSizeButton'); // Agregado
+const decreaseFontSizeButton = document.getElementById('decreaseFontSizeButton');
+const grayscaleButton = document.getElementById('grayscaleButton');
+const resetButton = document.getElementById('resetButton');
 
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('open');
@@ -15,23 +16,30 @@ invertColorsButton.addEventListener('click', () => {
 });
 
 increaseFontSizeButton.addEventListener('click', () => {
-    // Obtener el tamaño actual del texto
     const currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
-    
-    // Aumentar el tamaño del texto (puedes ajustar el valor según tus necesidades)
-    const newSize = parseFloat(currentSize) * 1.2; // Aumenta el tamaño en un 20%
-    
-    // Aplicar el nuevo tamaño del texto
+    const newSize = parseFloat(currentSize) * 1.2;
     document.body.style.fontSize = newSize + 'px';
 });
 
 decreaseFontSizeButton.addEventListener('click', () => {
-    // Obtener el tamaño actual del texto
     const currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
-    
-    // Disminuir el tamaño del texto (puedes ajustar el valor según tus necesidades)
-    const newSize = parseFloat(currentSize) / 1.2; // Disminuye el tamaño en un 20%
-    
-    // Aplicar el nuevo tamaño del texto
+    const newSize = parseFloat(currentSize) / 1.2;
     document.body.style.fontSize = newSize + 'px';
+});
+
+grayscaleButton.addEventListener('click', () => {
+    const isGrayscale = document.documentElement.style.filter === 'grayscale(100%)';
+
+    if (isGrayscale) {
+        document.documentElement.style.filter = '';
+    } else {
+        const grayscaleColors = ['#3c3c3c', '#515151', '#666666', '#8c8c8c', '#b5b5b5'];
+        document.documentElement.style.filter = `progid:DXImageTransform.Microsoft.gradient(startColorstr=${grayscaleColors[0]}, endColorstr=${grayscaleColors[4]}, GradientType=0)`;
+        document.documentElement.style.filter = `grayscale(100%)`;
+    }
+});
+
+// Agrega el evento para resetear la página
+resetButton.addEventListener('click', () => {
+    location.reload(true); // Recarga la página forzando la recarga desde el servidor
 });
