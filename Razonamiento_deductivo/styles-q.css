@@ -122,13 +122,13 @@ body{
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 50px;
+    margin-top: 5px;
   }
   
   th, td {
     border: 3px solid #000000;
     text-align: center;
-    padding: 20px;
+    padding: 5px;
   }
   
   th {
