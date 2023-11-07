@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-q.css">
     <script src="scripts.js"></script>
-    <link rel="icon" type="image/png" href="../Imagenes/Favicon.png"/>
-    <title>Atencion y Concentracion</title>
+    <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
+    <title>Razonamiento Deductivo</title>
 </head>
 <body>
 
@@ -39,32 +39,209 @@
         <p>- Tienes 5 minutos para responder.</p>    
         <h2 class="titulo-ejemplo">Ejemplo</h2>
         <img src="../Imagenes/deductivo/ejemplo1.png" alt="Mi Imagen" class="ejemplo-imagen">
-    </div>
 
-
-    <div class="contenedor-alternativa">
-        <p>a)</p><img src="../Imagenes/5.png" class="imagen-alternativa">
-        <p>b)</p><img src="../Imagenes/1.png" class="imagen-alternativa">
-        <p>c)</p><img src="../Imagenes/6.png" class="imagen-alternativa">
-    </div>
-
-    <div class="contenedor-alternativa">
-        <p>d)</p><img src="../Imagenes/5.png" class="imagen-alternativa">
-        <p>e)</p><img src="../Imagenes/1.png" class="imagen-alternativa">
-        <p>f)</p><img src="../Imagenes/6.png" class="imagen-alternativa">
-    </div>
-
-    <div class="contenedor-alternativa">
-        <p>g)</p></a><img src="../Imagenes/5.png" class="imagen-alternativa">
-        <p>h)</p><img src="../Imagenes/1.png" class="imagen-alternativa">
-        <p>i)</p><img src="../Imagenes/6.png" class="imagen-alternativa">
-    </div>
-
-    <div class="contenedor-alternativa">
-        <p>j)</p><img src="../Imagenes/5.png" class="imagen-alternativa">
-        <p>k)</p><img src="../Imagenes/1.png" class="imagen-alternativa">
-        <p>l)</p><img src="../Imagenes/6.png" class="imagen-alternativa">
-    </div>
+  
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  
+    <table>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            - El hijo de mi tía es mi primo.
+            <br>
+            - Gastón es hijo de mi tía.
+            <br>
+            <b>- Gastón es mi tío.</b>
+          </td>
+          <td>
+            <input type="radio" id="q1_true" name="q1" value="V">
+            <label for="q1_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q1_false" name="q1" value="F">
+            <label for="q1_false">F</label>
+          </td>
+        </tr>
     
+        <tr>
+          <td>2</td>
+          <td>
+            - El 01 de mayo es feriado irrenunciable.
+            <br>
+            - Hoy es 01 de mayo.
+            <br>
+            <b>- Hoy debo trabajar.</b>
+          </td>
+          <td>
+            <input type="radio" id="q2_true" name="q2" value="V">
+            <label for="q2_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q2_false" name="q2" value="F">
+            <label for="q2_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>3</td>
+          <td>
+            - Los limones verdes no han madurado.
+            <br>
+            - Este limón está amarillo.
+            <br>
+            <b>- Este limón no ha madurado.</b>
+          </td>
+          <td>
+            <input type="radio" id="q3_true" name="q3" value="V">
+            <label for="q3_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q3_false" name="q3" value="F">
+            <label for="q3_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>4</td>
+          <td>
+            - La edad mínima para inscribirse en la escuela es de cinco años.
+            <br>
+            - Juana tiene cuatro hijos.
+            <br>
+            <b>- Juana puede ser inscrita en la escuela.</b>
+          </td>
+          <td>
+            <input type="radio" id="q4_true" name="q4" value="V">
+            <label for="q4_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q4_false" name="q4" value="F">
+            <label for="q4_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>5</td>
+          <td>
+            - Las plantas necesitan agua para vivir.
+            <br>
+            - Los girasoles son plantas.
+            <br>
+            <b>- Los girasoles necesitan agua para vivir. </b>
+          </td>
+          <td>
+            <input type="radio" id="q5_true" name="q5" value="V">
+            <label for="q5_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q5_false" name="q5" value="F">
+            <label for="q5_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>6</td>
+          <td>
+            - Los relámpagos anticipan un trueno.
+            <br>
+            - Hoy hubo un relámpago.
+            <br>
+            <b>- Ya no vendrá un trueno.</b>
+          </td>
+          <td>
+            <input type="radio" id="q6_true" name="q6" value="V">
+            <label for="q6_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q6_false" name="q6" value="F">
+            <label for="q6_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>7</td>
+          <td>
+            - Las galletas tardan 45 minutos en hornearse.
+            <br>
+            - Son las 3:00 PM y María mete las galletas al horno.
+            <br>
+            <b>- Las galletas estarán listas a las 4:00 PM.</b>
+          </td>
+          <td>
+            <input type="radio" id="q7_true" name="q7" value="V">
+            <label for="q7_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q7_false" name="q7" value="F">
+            <label for="q7_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>8</td>
+          <td>
+            - Todos los miércoles John sale 10 minutos antes de su trabajo.
+            <br>
+            - Hoy es miércoles.
+            <br>
+            <b>- Hoy John saldrá 25 minutos antes del trabajo.</b>
+          </td>
+          <td>
+            <input type="radio" id="q8_true" name="q8" value="V">
+            <label for="q8_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q8_false" name="q8" value="F">
+            <label for="q8_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>9</td>
+          <td>
+            - Todas las bacterias son organismos unicelulares.
+            <br>
+            - La Escherichia coli es una bacteria.
+            <br>
+            <b>- La Escherichia coli es un organismo unicelular.</b>
+          </td>
+          <td>
+            <input type="radio" id="q9_true" name="q9" value="V">
+            <label for="q9_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q9_false" name="q9" value="F">
+            <label for="q9_false">F</label>
+          </td>
+        </tr>
+    
+        <tr>
+          <td>10</td>
+          <td>
+            - Todos los hijos de Juana tienen los ojos color café.
+            <br>
+            - Lucía y Pablo son hijos de Juana.
+            <br>
+            <b>- Lucía tiene los ojos color café.</b>
+          </td>
+          <td>
+            <input type="radio" id="q10_true" name="q10" value="V">
+            <label for="q10_true">V</label>
+          </td>
+          <td>
+            <input type="radio" id="q10_false" name="q10" value="F">
+            <label for="q10_false">F</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+  
+    </body>
+    </div>
 </body>
 </html>
