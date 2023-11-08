@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesexp.css">
+    <script src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
+    <title>RAZONAMIENTO ESPACIAL</title>
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ✓</a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ✓</a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ✓</a></li>
+            <li><a href="#">Alto contraste ✗</a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ✓</a></li>
+            <li><a href="#">Fondo claro ✗</a></li>
+            <li><a href="#">Fuente legible ✗</a></li>
+            <li><a href="#" id="resetButton">Reset ✓</a></li>
+        </ul>
+    </div>
+
+    <button id="toggleButton">Accesibilidad</button>
+    <script src="../JS/sidebar.js"></script>
+
+    <div class="bloque-enunciado">
+
+        <h1 class="titulo-seccion"> </h1>
+        <p class="enunciado">Si la figura que se muestra más abajo es rotada 90 grados hacia la <b>derecha</b>...</p>
+        <div>
+            <img src="../Imagenes/espacial/ejemplo.png">
+            <img src="../Imagenes/espacial/Imagen3.png">
+        </div>
+
+        <p class="enunciado">¿Cuál de las siguientes figuras muestra el resultado de la rotación?</p>
+    </div>   
+    <div class="centrar-alternativa">
+        <label>a)</label>
+        <div class="alternativa" id="alternativa-a">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen4.jpg" class="imagen-alternativa" id="imagen-a">
+            </div>
+        </div>
+        
+        <label>b)</label>
+        <div class="alternativa" id="alternativa-b">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen5.jpg" class="imagen-alternativa" id="imagen-b">
+            </div>
+        </div>
+        
+        <label>c)</label>
+        <div class="alternativa" id="alternativa-c">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen6.jpg" class="imagen-alternativa" id="imagen-c">
+            </div>
+        </div>
+        
+        <label>d)</label>
+        <div class="alternativa borde-alternativa-d" id="alternativa-d">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen7.jpg" class="imagen-alternativa" id="imagen-d">
+            </div>
+        </div>           
+    </div>
+    
+    <div>
+        <a href="Seccion-2.html" class="atras">Volver atras</a>
+    </div>
+
+    <div>
+        <a href="Q1.html" class="siguiente">Siguiente</a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-q.css">
+    <script src="scripts.js"></script>
+    <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
+    <title>RAZONAMIENTO ESPACIAL</title>
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ✓</a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ✓</a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ✓</a></li>
+            <li><a href="#">Alto contraste ✗</a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ✓</a></li>
+            <li><a href="#">Fondo claro ✗</a></li>
+            <li><a href="#">Fuente legible ✗</a></li>
+            <li><a href="#" id="resetButton">Reset ✓</a></li>
+        </ul>
+    </div>
+
+    <button id="toggleButton">Accesibilidad</button>
+    <script src="../JS/sidebar.js"></script>
+
+    <div class="bloque-enunciado">
+
+        <h1 class="titulo-seccion"> </h1>
+        <p class="enunciado">Si la figura que se muestra más abajo es rotada 90 grados hacia <b>derecha</b>...</p>
+        <div>
+            <img src="../Imagenes/espacial/Imagen14.png">
+        </div>
+
+        <p class="enunciado">¿Cuál de las siguientes figuras muestra el resultado de la rotación?</p>
+    </div>   
+    <div class="centrar-alternativa">
+        <label>a)</label>
+        <div class="alternativa" id="alternativa-a">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen15.jpg" class="imagen-alternativa" id="imagen-a">
+                <div class="overlay" id="overlay-a">
+                    <img src="../Imagenes/espacial/X.png" class="marca-x">
+                </div>
+            </div>
+        </div>
+        
+        <label>b)</label>
+        <div class="alternativa" id="alternativa-b">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen16.png" class="imagen-alternativa" id="imagen-b">
+                <div class="overlay" id="overlay-b">
+                    <img src="../Imagenes/espacial/X.png" class="marca-x">
+                </div>
+            </div>
+        </div>
+        
+        <label>c)</label>
+        <div class="alternativa" id="alternativa-c">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen17.png" class="imagen-alternativa" id="imagen-c">
+                <div class="overlay" id="overlay-c">
+                    <img src="../Imagenes/espacial/X.png" class="marca-x">
+                </div>
+            </div>
+        </div>
+        
+        <label>d)</label>
+        <div class="alternativa" id="alternativa-d">
+            <div class="imagen-container">
+                <img src="../Imagenes/espacial/Imagen18.png" class="imagen-alternativa" id="imagen-d">
+                <div class="overlay" id="overlay-d">
+                    <img src="../Imagenes/espacial/X.png" class="marca-x">
+                </div>
+            </div>
+        </div>
+                
+    </div>
+    
+    <div>
+        <a href="Q1.html" class="atras">Volver atras</a>
+    </div>
+
+    <div>
+        <a href="Q3.html" class="siguiente">Siguiente</a>
+    </div>
+
+    <script>
+        const alternativas = document.querySelectorAll('.alternativa');
+    
+        function handleAlternativaClick(event) {
+            alternativas.forEach(alternativa => {
+                alternativa.classList.remove('seleccionada');
+            });
+    
+            event.currentTarget.classList.add('seleccionada');
+        }
+    
+        alternativas.forEach(alternativa => {
+            alternativa.addEventListener('click', handleAlternativaClick);
+        });
+    </script>     
+    
+</body>
+</html>

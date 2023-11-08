@@ -1,0 +1,201 @@
+body{
+    background-color: rgb(245, 235, 222);
+}
+
+.bloque-enunciado{
+    margin: auto;
+    margin-top: 20px;
+    width: 800px;
+    text-align: center;
+}
+.titulo-ejemplo{
+    text-align: left;
+    margin-top: 70px;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+}
+.ejemplo-imagen{
+    width: 25%;
+    height: 25%;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+}
+
+.enunciado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14;
+}
+
+.titulo-seccion{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+.container{
+    justify-content: center;
+}
+
+.invert-colors {
+    -webkit-filter: invert(100%);
+   filter: invert(100%);
+}
+
+.sidebar {
+    background-color: #ffffff;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+    top: 100px;
+    left: 0;
+    transition: transform 0.3s ease-in-out; 
+    transform: translateX(-250px); 
+}
+
+.sidebar.open {
+    transform: translateX(0); 
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+    cursor: pointer;
+}
+
+/* Estilos del botón */
+#toggleButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+    transition: transform 0.3s ease;
+}
+#toggleButton:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    margin-left: 0px;
+    padding: 20px;
+}
+
+#botones {
+    margin-top: 100px; 
+    text-align: right;
+    margin-right: 50px;
+}
+
+.siguiente{
+    text-decoration: none;
+    position: fixed;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+}
+.atras{
+    text-decoration: none;
+    position: fixed;
+    float: left;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+}
+
+.centrar-alternativa{
+    text-align: center;
+}
+
+
+.alternativa {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px; 
+}
+
+.imagen-container {
+    position: relative;
+    display: inline-block;
+}
+
+.imagen-alternativa {
+    width: 100px; 
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: transparent; 
+    display: none;
+}
+
+.marca-x {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    display: none;
+}
+
+.imagen-container:hover .overlay {
+    display: flex;
+}
+
+.overlay:hover .marca-x {
+    display: block;
+    cursor: pointer;
+}
+
+.borde-alternativa-d {
+    border: 5px solid red; /* Puedes ajustar el color y el grosor del borde según tus preferencias */
+}
+
