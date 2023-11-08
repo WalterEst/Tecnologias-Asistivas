@@ -2,52 +2,16 @@ body{
     background-color: rgb(245, 235, 222);
 }
 
-.bloque-enunciado{
-    margin: auto;
-    margin-top: 50px;
-    width: 800px;
-    text-align: center;
-}
-.titulo-ejemplo{
-    text-align: center;
-}
-.ejemplo-imagen{
-    width: 25%;
-    height: 25%;
-    margin-bottom: 50px;
-}
-
-.enunciado{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14;
-}
-
 .titulo-seccion{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    justify-content: center;
-}
-
-.contenedor-alternativa{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-.imagen-alternativa{
-    width: 15%;
-    height: 15%;
+.bloque-enunciado{
+    margin: auto;
+    margin-top: 150px;
+    width: 600px;
     text-align: center;
-    margin: 4%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.imagen-alternativa:hover{
-    
-    cursor: pointer;
 }
 
 .invert-colors {
@@ -87,4 +51,27 @@ body{
 input[type="checkbox"] {
     width: 16px;
     height: 16px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table, th, td input {
+    width: 20px;
+    height: 20px;
+}
+
+table, tr, th p{
+    width: 40px;
+}
+
+th, td {
+    padding: 10px;
 }
