@@ -10,20 +10,30 @@ body{
 }
 .titulo-ejemplo{
     text-align: center;
+    size: 600px;
 }
 .ejemplo-imagen{
-    width: 60%;
+    width:50%;
     height: 60%;
-    margin-bottom: 50px;
+    margin-bottom: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.imagen-pregunta{
+    width: 50%;
+    height: 60%;
+    margin-bottom: 35px;
 }
 
 .enunciado{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14;
+    font-size: 130%;
 }
 
 .titulo-seccion{
-    font-size: 16px;
+    font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,9 +46,16 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+
 .imagen-alternativa{
-    width: 15%;
-    height: 15%;
+    width: 10%;
+    height: 10%;
     text-align: center;
     margin: 4%;
     margin-top: 40px;
@@ -117,20 +134,3 @@ body{
     margin-left: 0px;
     padding: 20px;
 }
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 5px;
-  }
-  
-  th, td {
-    border: 3px solid #000000;
-    text-align: center;
-    padding: 5px;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
