@@ -12,9 +12,9 @@ body{
     text-align: center;
 }
 .ejemplo-imagen{
-    width: 70%;
-    height: 70%;
-    margin-bottom: 200px;
+    width: 25%;
+    height: 25%;
+    margin-bottom: 50px;
 }
 
 .enunciado{
@@ -34,6 +34,7 @@ body{
 .contenedor-alternativa{
     display:flex;
     justify-content: center;
+    margin-bottom: 50px;
     align-items: center;
 }
 .imagen-alternativa{
