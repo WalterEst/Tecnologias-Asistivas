@@ -9,9 +9,14 @@ body{
 
 .bloque-enunciado{
     margin: auto;
-    margin-top: 150px;
-    width: 600px;
+    margin-top: 50px;
+    width: 800px;
     text-align: center;
+}
+
+.titulo-ejemplo{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .invert-colors {
