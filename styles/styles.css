@@ -21,6 +21,21 @@ body{
    filter: invert(100%);
 }
 
+.siguiente{
+    text-decoration: none;
+    position: fixed;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+}
+
 .formulario{
     text-align: left;
     margin: 0;
