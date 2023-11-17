@@ -15,33 +15,33 @@
         <h3>Grupo objetivo: Segundo medio</h3>
 
         <div class="formulario">
-            <form action="procesar_formulario.php" method="post">
+            <form method="post">
                 <p>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required><br>
+                    <input type="text" name="nombre" required><br>
                 </p>
                 <p>
                     <label for="apellido_paterno">Apellido Paterno:</label>
-                    <input type="text" id="apellido_paterno" name="apellido_paterno" required><br>
+                    <input type="text" name="apellido_paterno" required><br>
                 </p>
                 <p>
                     <label for="apellido_materno">Apellido Materno:</label>
-                    <input type="text" id="apellido_materno" name="apellido_materno" required><br>
+                    <input type="text" name="apellido_materno" required><br>
                 </p>
                 <p>
                     <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required><br>
-                </p>
-                <p>
-                    <label for="fecha">Fecha:</label>
-                    <input type="date" id="fecha" name="fecha" required><br>
+                    <input type="number" name="edad" required><br>
                 </p>
                 <div id="botones">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" name="register">
                 </div>
             </form>
         </div>
-        
+
+        </form>
+        <?php 
+        include("registrar.php");
+        ?>
         
     </div>
 
