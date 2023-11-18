@@ -134,3 +134,44 @@ table {
   th {
     background-color: #f2f2f2;
   }
+
+  .true-false-btn {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .option-image {
+    width: 50px; 
+    height: 50px; 
+  }
+  
+  .true-false-btn::before {
+    content: 'O';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 60px; 
+    color: red; 
+    display: none;
+  }
+  
+  input[type="radio"]:checked + .true-false-btn::before {
+    display: block;
+  }
+
+  .siguiente{
+    text-decoration: none;
+    position: fixed;
+    float: right;
+    right: 570px;
+    bottom: 100px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 2px solid #2C87C2;
+}
