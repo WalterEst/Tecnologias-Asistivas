@@ -21,10 +21,16 @@ body{
     
 }
 
+.contenedor-imagen-pregunta{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .imagen-pregunta{
-    width: 50%;
-    height: 60%;
-    margin-bottom: 35px;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
 }
 
 .enunciado{
@@ -134,4 +140,34 @@ input[type="checkbox"] {
 .content {
     margin-left: 0px;
     padding: 20px;
+}
+
+
+.siguiente{
+    text-decoration: none;
+    position: fixed;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+}
+.atras{
+    text-decoration: none;
+    position: fixed;
+    float: left;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
 }
