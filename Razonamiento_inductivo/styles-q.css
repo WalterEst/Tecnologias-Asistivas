@@ -21,6 +21,7 @@ body{
     
 }
 
+
 .contenedor-imagen-pregunta{
     margin: auto;
     justify-content: center;
@@ -29,8 +30,10 @@ body{
 
 .imagen-pregunta{
     width: 200px;
-    height: 200px;
-    padding: 30px;
+    height: 150px;
+    margin-bottom: 100px;
+    margin: 120px;
+    margin-top: 100px;
 }
 
 .enunciado{
@@ -67,6 +70,17 @@ input[type="checkbox"] {
     margin: 4%;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.imagen-alternativa2{
+    width: 8%;
+    height: 8%;
+    text-align: left;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: inline-block;
+
 }
 
 .imagen-alternativa:hover{
