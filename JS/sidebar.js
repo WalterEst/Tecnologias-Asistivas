@@ -7,39 +7,32 @@ const decreaseFontSizeButton = document.getElementById('decreaseFontSizeButton')
 const grayscaleButton = document.getElementById('grayscaleButton');
 const resetButton = document.getElementById('resetButton');
 
-// Restaurar el estado de la escala de grises al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     restoreStateFromLocalStorage();
 });
 
-// Agregar un evento de clic al botón de alternar (toggle) para abrir/cerrar el menú
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     saveStateToLocalStorage('sidebarState', sidebar.classList.contains('open'));
 });
 
-// Agregar un evento de clic al botón de inversión de colores
 invertColorsButton.addEventListener('click', () => {
     document.documentElement.classList.toggle('invert-colors');
     saveStateToLocalStorage('invertColorsState', document.documentElement.classList.contains('invert-colors'));
 });
 
-// Agregar un evento de clic al botón de aumento de tamaño de fuente
 increaseFontSizeButton.addEventListener('click', () => {
     changeFontSize('increase');
 });
 
-// Agregar un evento de clic al botón de reducción de tamaño de fuente
 decreaseFontSizeButton.addEventListener('click', () => {
     changeFontSize('decrease');
 });
 
-// Agregar un evento de clic al botón de escala de grises
 grayscaleButton.addEventListener('click', () => {
     toggleGrayscale();
 });
 
-// Función para cambiar el tamaño de la fuente
 function changeFontSize(action) {
     const currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
     let newSize = parseFloat(currentSize);
@@ -54,7 +47,6 @@ function changeFontSize(action) {
     saveStateToLocalStorage('fontSizeState', newSize);
 }
 
-// Función para alternar la escala de grises y guardar/restaurar su estado
 function toggleGrayscale() {
     const isGrayscale = document.documentElement.classList.contains('grayscale');
     if (isGrayscale) {
