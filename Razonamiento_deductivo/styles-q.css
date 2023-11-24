@@ -55,65 +55,6 @@ body{
    filter: invert(100%);
 }
 
-.sidebar {
-    background-color: #ffffff;
-    width: 200px;
-    height: auto;
-    position: fixed;
-    border-radius: 14px;
-    border: 1px solid #2C87C2;
-    top: 100px;
-    left: 0;
-    transition: transform 0.3s ease-in-out; 
-    transform: translateX(-250px); 
-}
-
-.sidebar.open {
-    transform: translateX(0); 
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 16px;
-}
-
-.sidebar ul li a:hover {
-    cursor: pointer;
-}
-
-.sidebar ul li a:hover {
-    cursor: pointer;
-}
-
-/* Estilos del botón */
-#toggleButton {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 14px;
-    border: 1px solid #2C87C2;
-    transition: transform 0.3s ease;
-}
-
-#toggleButton:hover {
-    transform: scale(1.1);
-}
-
 .content {
     margin-left: 0px;
     padding: 20px;

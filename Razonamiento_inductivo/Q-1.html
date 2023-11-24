@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-q.css">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
+    <link rel="stylesheet" href="../styles/global.css">
+    <title>RAZONAMIENTO INDUCTIVO</title>
 </head>
 <body>
 
+    <div class="d-clock">
+        <div class="inner-circle">
+            <div>
+                <span id="hr">02</span>
+                <span id="dot">:</span>
+                <span id="min">40</span>
+            </div>
+            <span class="time"></span>
+        </div>
+    </div>
+<script>var hr = document.getElementById("hr");
+    var min = document.getElementById("min");
+    
+    var totalSeconds = 160; // 1 minuto a segundos
+    
+    var interval = setInterval(() => {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+    
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+    
+        hr.innerHTML = minutes;
+        min.innerHTML = seconds;
+    
+        if (totalSeconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "Q-2.html";
+            alert("Tiempo finalizado");
+        }
+    
+        totalSeconds--;
+    }, 1000);</script>
+
+
+    <br>
     <p class="enunciado"><b>INSTRUCCIONES:</b> Observa el modelo y marca con una X la alternativa que sigue en la secuencia</p>
 
     <h2 class="titulo-ejemplo">MODELO</h2>
@@ -18,10 +60,6 @@
         <p>B)</p><input type="checkbox"><img src="/Imagenes/inductivo/Imagen51.png" class="imagen-alternativa">
         <p>C)</p><input type="checkbox"><img src="/Imagenes/inductivo/Imagen52.png" class="imagen-alternativa">
         <p>D)</p><input type="checkbox"><img src="/Imagenes/inductivo/Imagen53.png" class="imagen-alternativa">
-    </div>
-
-    <div>
-        <a href="Seccion-3-1.html" class="atras">Volver atras</a>
     </div>
 
     <div>

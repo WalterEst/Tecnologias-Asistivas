@@ -4,11 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-q-2.css">
-    <link rel="stylesheet" href="../styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/global.css">
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
-    <title>Pregunta 2</title>
+    <link rel="stylesheet" href="../styles/countdown.css">
+    <title>ATENCION Y CONCENTRACION</title>
 </head>
 <body>
+
+    <div class="d-clock">
+        <div class="inner-circle">
+            <div>
+                <span id="hr">01</span>
+                <span id="dot">:</span>
+                <span id="min">00</span>
+            </div>
+            <span class="time"></span>
+        </div>
+    </div>
+<script>var hr = document.getElementById("hr");
+    var min = document.getElementById("min");
+    
+    var totalSeconds = 1 * 60; // 1 minuto a segundos
+    
+    var interval = setInterval(() => {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+    
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+    
+        hr.innerHTML = minutes;
+        min.innerHTML = seconds;
+    
+        if (totalSeconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "Seccion-1-F.html";
+            alert("Tiempo finalizado");
+        }
+    
+        totalSeconds--;
+    }, 1000);</script>
+
+
+
 
     <div class="sidebar" id="sidebar">
         <ul>
@@ -23,7 +65,9 @@
         </ul>
     </div>
 
-    <button id="toggleButton">Accesibilidad</button>
+    <button id="toggleButton">
+        <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
+      </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="bloque-enunciado">
@@ -44,76 +88,70 @@
     <table>
        
         <tr>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
         </tr>
 
         <tr>
-            <td>ɸ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
         </tr>
 
         <tr>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
         </tr>
 
         <tr>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
         </tr>
 
         <tr>
-            <td>Ø<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ɸ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
-            <td>Ø<br><input type="number"></td>
-            <td>®<br><input type="number"></td>
-            <td>ϴ<br><input type="number"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ɸ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
+            <td>Ø<br><input type="text"></td>
+            <td>®<br><input type="text"></td>
+            <td>ϴ<br><input type="text"></td>
         </tr>
     </table>
-
-
-
-    <div>
-        <a href="Seccion-1-2.html" class="atras">Volver atras</a>
-    </div>
 
     <div>
         <a href="Seccion-1-F.html" class="siguiente">Siguiente</a>
