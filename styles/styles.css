@@ -16,11 +16,6 @@ body{
     text-align: center;
 }
 
-.invertir-color {
-    -webkit-filter: invert(100%);
-   filter: invert(100%);
-}
-
 .siguiente{
     text-decoration: none;
     position: fixed;

@@ -15,6 +15,11 @@ body{
     border-radius: 14px;
 }
 
+.invert-colors {
+    -webkit-filter: invert(100%);
+   filter: invert(100%);
+}
+
 .siguiente{
     text-decoration: none;
     position: fixed;
