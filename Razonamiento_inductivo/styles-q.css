@@ -13,26 +13,22 @@ body{
     size: 600px;
 }
 .ejemplo-imagen{
-    width:60%;
+    width:70%;
     height: 70%;
     margin-bottom: 1000px;
     margin: auto;
     margin-top: 100px;
-    
 }
-
 
 .contenedor-imagen-pregunta{
     margin: auto;
+    margin-left: 220px;
     justify-content: center;
-    align-items: center;
 }
 
 .imagen-pregunta{
-    width: 200px;
-    height: 150px;
     margin-bottom: 100px;
-    margin: 120px;
+    margin: 100px;
     margin-top: 100px;
 }
 
@@ -40,6 +36,11 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14;
     text-align: center;
+    margin: auto;
+    width: 800px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .titulo-seccion{

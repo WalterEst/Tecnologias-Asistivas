@@ -20,6 +20,9 @@ body{
 .enunciado{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .titulo-seccion{

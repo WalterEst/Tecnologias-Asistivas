@@ -1,4 +1,3 @@
-// Obtener referencias a elementos HTML por su ID
 const sidebar = document.getElementById('sidebar');
 const toggleButton = document.getElementById('toggleButton');
 const invertColorsButton = document.getElementById('invertColorsButton');
@@ -59,12 +58,10 @@ function toggleGrayscale() {
 }
 
 
-// Función para guardar el estado en localStorage
 function saveStateToLocalStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 
-// Función para restaurar el estado desde localStorage
 function restoreStateFromLocalStorage() {
     restoreElementState('sidebarState', sidebar, 'open');
     restoreElementState('invertColorsState', document.documentElement, 'invert-colors');
@@ -72,7 +69,6 @@ function restoreStateFromLocalStorage() {
     restoreGrayscaleState();
 }
 
-// Función para restaurar el estado de la fuente desde localStorage
 function restoreFontSizeState() {
     const fontSize = JSON.parse(localStorage.getItem('fontSizeState'));
     if (fontSize) {
@@ -80,7 +76,6 @@ function restoreFontSizeState() {
     }
 }
 
-// Función para restaurar el estado de la escala de grises desde localStorage
 function restoreGrayscaleState() {
     const isGrayscale = JSON.parse(localStorage.getItem('grayscaleState'));
     if (isGrayscale) {
@@ -88,7 +83,6 @@ function restoreGrayscaleState() {
     }
 }
 
-// Función para restaurar el estado de los elementos desde localStorage
 function restoreElementState(key, element, className) {
     const savedState = JSON.parse(localStorage.getItem(key));
     if (savedState !== null) {
@@ -96,7 +90,6 @@ function restoreElementState(key, element, className) {
     }
 }
 
-// Agregar la funcionalidad para el botón de reset
 resetButton.addEventListener('click', () => {
     localStorage.clear();
     location.reload(true);

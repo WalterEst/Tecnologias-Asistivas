@@ -37,7 +37,7 @@ body{
     padding: 10px;
     cursor: pointer;
     border-radius: 14px;
-    border: 1px solid #2C87C2;
+    border: 2px solid #2C87C2;
 }
 .atras{
     text-decoration: none;
@@ -138,7 +138,7 @@ body{
     height: auto;
     position: fixed;
     border-radius: 14px;
-    border: 1px solid #2C87C2;
+    border: 2px solid #2C87C2;
     top: 200px;
     left: 0;
     transition: transform 0.3s ease-in-out; 
@@ -172,6 +172,13 @@ body{
     cursor: pointer;
 }
 
+.contenedor-enunciados{
+
+    border: 2px solid #000000;
+    padding: 5px;
+
+}
+
 /* Estilos del botón */
 #toggleButton {
     position: fixed;
@@ -183,7 +190,7 @@ body{
     padding: 10px;
     cursor: pointer;
     border-radius: 14px;
-    border: 1px solid #2C87C2;
+    border: 2px solid #2C87C2;
     transition: transform 0.3s ease;
 }
 #toggleButton:hover {
