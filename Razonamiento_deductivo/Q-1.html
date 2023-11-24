@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-q.css">
+    <link rel="stylesheet" href="../styles/global.css">
     <script src="scripts.js"></script>
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
     <title>Razonamiento Deductivo</title>
 </head>
 <body>
+
+     <div class="d-clock">
+        <div class="inner-circle">
+            <div>
+                <span id="hr">05</span>
+                <span id="dot">:</span>
+                <span id="min">00</span>
+            </div>
+            <span class="time"></span>
+        </div>
+    </div>
+<script>var hr = document.getElementById("hr");
+    var min = document.getElementById("min");
+    
+    var totalSeconds = 5 * 60; // 1 minuto a segundos
+    
+    var interval = setInterval(() => {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+    
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+    
+        hr.innerHTML = minutes;
+        min.innerHTML = seconds;
+    
+        if (totalSeconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "Seccion-4-F.html";
+            alert("Tiempo finalizado");
+        }
+    
+        totalSeconds--;
+    }, 1000);</script>
+
 
     <div class="sidebar" id="sidebar">
         <ul>
@@ -23,7 +63,9 @@
         </ul>
     </div>
 
-    <button id="toggleButton">Accesibilidad</button>
+    <button id="toggleButton">
+      <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
+    </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="bloque-enunciado">
@@ -33,15 +75,11 @@
         <h1 class="titulo-seccion"> </h1>
         <p class="enunciado"><b>INSTRUCCIONES:</b> Ahora resolveremos 10 tareas que tienen relación con el Razonamiento
             deductivo.</p> <br>
-        <p>- Lee atentamente cada enunciado y presta atención a las frases en <b>negrita</b> de cada
+        <p class="enunciado">- Lee atentamente cada enunciado y presta atención a las frases en <b>negrita</b> de cada
             ejercicio para encontrar la respuesta.</p>
-        <p>- Encierra en un círculo la alternativa correcta considerando la V si es <b>Verdadera</b> y F si es <b>Falsa</b>. </p>
-        <p>- Tienes 5 minutos para responder.</p>    
-        <h2 class="titulo-ejemplo">Ejemplo</h2>
-        <img src="../Imagenes/deductivo/ejemplo1.png" alt="Mi Imagen" class="ejemplo-imagen">
-
-  
-    <link rel="stylesheet" href="styles.css">
+            <p class="enunciado">- Encierra en un círculo la alternativa correcta considerando la V si es <b>Verdadera</b> y F si es <b>Falsa</b>. </p>
+            <p class="enunciado">- Tienes 5 minutos para responder.</p>    
+        <br>
   </head>
   <body>
   
@@ -251,13 +289,10 @@
         </tr>
       </tbody>
     </table>
-    
-    </body>
-    </html>
-    
-    
-  
-    </body>
-    </div>
+
+    <div>
+      <a href="Seccion-4-F.html" class="siguiente">Siguiente</a>
+  </div>
+
 </body>
 </html>

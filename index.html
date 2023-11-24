@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="icon" type="image/png" href="Imagenes/index/Favicon.png"/>
     <title>Pagina principal</title>
 </head>
 <body>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ✓</a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ✓</a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ✓</a></li>
+            <li><a href="#">Alto contraste ✗</a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ✓</a></li>
+            <li><a href="#">Fondo claro ✗</a></li>
+            <li><a href="#">Fuente legible ✗</a></li>
+            <li><a href="#" id="resetButton">Reset ✓</a></li>
+        </ul>
+    </div>
+
+    <button id="toggleButton">
+        <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
+      </button>
+    <script src="../JS/sidebar.js"></script>
+
+
     <div class = "contenedor-titulos-index">
 
         <h1>CAPACIDADES GENERALES</h1>
@@ -15,33 +36,33 @@
         <h3>Grupo objetivo: Segundo medio</h3>
 
         <div class="formulario">
-            <form action="procesar_formulario.php" method="post">
+            <form method="post">
                 <p>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required><br>
+                    <input type="text" name="nombre" required><br>
                 </p>
                 <p>
                     <label for="apellido_paterno">Apellido Paterno:</label>
-                    <input type="text" id="apellido_paterno" name="apellido_paterno" required><br>
+                    <input type="text" name="apellido_paterno" required><br>
                 </p>
                 <p>
                     <label for="apellido_materno">Apellido Materno:</label>
-                    <input type="text" id="apellido_materno" name="apellido_materno" required><br>
+                    <input type="text" name="apellido_materno" required><br>
                 </p>
                 <p>
                     <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" required><br>
-                </p>
-                <p>
-                    <label for="fecha">Fecha:</label>
-                    <input type="date" id="fecha" name="fecha" required><br>
+                    <input type="number" name="edad" required><br>
                 </p>
                 <div id="botones">
-                    <input type="submit" value="Enviar">
+                    <input type="submit" name="register">
                 </div>
             </form>
         </div>
-        
+
+        </form>
+        <?php 
+        include("registrar.php");
+        ?>
         
     </div>
 

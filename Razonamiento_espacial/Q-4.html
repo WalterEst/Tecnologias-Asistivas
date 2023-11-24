@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-q.css">
+    <link rel="stylesheet" href="../styles/global.css">
     <script src="scripts.js"></script>
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
     <title>RAZONAMIENTO ESPACIAL</title>
 </head>
 <body>
+
+    <div class="d-clock">
+        <div class="inner-circle">
+            <div>
+                <span id="hr">02</span>
+                <span id="dot">:</span>
+                <span id="min">00</span>
+            </div>
+            <span class="time"></span>
+        </div>
+    </div>
+<script>var hr = document.getElementById("hr");
+    var min = document.getElementById("min");
+    
+    var totalSeconds = 2 * 60; // 1 minuto a segundos
+    
+    var interval = setInterval(() => {
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+    
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+    
+        hr.innerHTML = minutes;
+        min.innerHTML = seconds;
+    
+        if (totalSeconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "Seccion-2-F.html";
+            alert("Tiempo finalizado");
+        }
+    
+        totalSeconds--;
+    }, 1000);</script>
+
+
 
     <div class="sidebar" id="sidebar">
         <ul>
@@ -23,7 +64,9 @@
         </ul>
     </div>
 
-    <button id="toggleButton">Accesibilidad</button>
+    <button id="toggleButton">
+        <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
+      </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="bloque-enunciado">
@@ -78,13 +121,9 @@
         </div>
                 
     </div>
-    
-    <div>
-        <a href="Q3.html" class="atras">Volver atras</a>
-    </div>
 
     <div>
-        <a href="" class="siguiente">Siguiente</a>
+        <a href="Seccion-2-F.html" class="siguiente">Siguiente</a>
     </div>
 
     <script>

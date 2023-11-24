@@ -13,23 +13,33 @@ body{
     size: 600px;
 }
 .ejemplo-imagen{
-    width:50%;
-    height: 60%;
+    width:60%;
+    height: 70%;
     margin-bottom: 1000px;
     margin: auto;
     margin-top: 100px;
     
 }
 
+
+.contenedor-imagen-pregunta{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .imagen-pregunta{
-    width: 50%;
-    height: 60%;
-    margin-bottom: 35px;
+    width: 200px;
+    height: 150px;
+    margin-bottom: 100px;
+    margin: 120px;
+    margin-top: 100px;
 }
 
 .enunciado{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 130%;
+    font-size: 14;
+    text-align: center;
 }
 
 .titulo-seccion{
@@ -60,6 +70,17 @@ input[type="checkbox"] {
     margin: 4%;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.imagen-alternativa2{
+    width: 8%;
+    height: 8%;
+    text-align: left;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: inline-block;
+
 }
 
 .imagen-alternativa:hover{
@@ -133,4 +154,34 @@ input[type="checkbox"] {
 .content {
     margin-left: 0px;
     padding: 20px;
+}
+
+
+.siguiente{
+    text-decoration: none;
+    position: fixed;
+    float: right;
+    right: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
+}
+.atras{
+    text-decoration: none;
+    position: fixed;
+    float: left;
+    left: 10px;
+    bottom: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid #2C87C2;
 }
