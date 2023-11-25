@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const contentToRead = document.querySelector('.bloque-enunciado');
+    const contentToRead = document.querySelector('.bloque-enunciado, .contenedor-titulos-index');
     const readAloudButton = document.getElementById('readAloudButton');
 
     readAloudButton.addEventListener('click', function (event) {
