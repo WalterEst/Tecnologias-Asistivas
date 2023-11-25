@@ -95,7 +95,7 @@ highContrastButton.addEventListener('click', () => {
     }
 
     // Toggle the 'seleccionada' class on the high contrast button
-    highContrastButton.classList.toggle('seleccionada');
+    highContrastButton.classList.toggle('seleccionada', !isHighContrast);
 });
 
 function changeFontSize(action) {
