@@ -36,16 +36,13 @@ grayscaleButton.addEventListener('click', () => {
 });
 
 lightBackgroundButton.addEventListener('click', () => {
-    // Verificar si el fondo claro ya está activado
     const isLightBackground = document.body.style.backgroundColor === 'white' && document.body.style.color === 'black';
 
     if (isLightBackground) {
-        // Desactivar el fondo claro
-        document.body.style.backgroundColor = ''; // Restaurar color de fondo predeterminado
-        document.body.style.color = ''; // Restaurar color de texto predeterminado
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
         saveStateToLocalStorage('lightBackgroundState', false);
     } else {
-        // Activar el fondo claro
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         saveStateToLocalStorage('lightBackgroundState', true);
@@ -53,22 +50,18 @@ lightBackgroundButton.addEventListener('click', () => {
 });
 
 readableFontButton.addEventListener('click', () => {
-    // Verificar si la fuente legible ya está activada
     const isReadableFont = document.body.style.fontFamily === 'Verdana, Arial, sans-serif' &&
         document.body.style.fontSize === '18px' &&
         document.body.style.lineHeight === '1.6' &&
         document.body.style.marginLeft === '20px';
 
     if (isReadableFont) {
-        // Desactivar la fuente legible
-        // Puedes restaurar los valores de la fuente a los predeterminados según tus necesidades
         document.body.style.fontFamily = '';
         document.body.style.fontSize = '';
         document.body.style.lineHeight = '';
         document.body.style.marginLeft = '';
         saveStateToLocalStorage('readableFontState', false);
     } else {
-        // Activar la fuente legible
         document.body.style.fontFamily = 'Verdana, Arial, sans-serif';
         document.body.style.fontSize = '18px';
         document.body.style.lineHeight = '1.6';
@@ -78,36 +71,31 @@ readableFontButton.addEventListener('click', () => {
 });
 
 highContrastButton.addEventListener('click', () => {
-    // Verificar si el botón de alto contraste ya está activado
     const isHighContrast = highContrastButton.classList.contains('seleccionada');
 
     if (isHighContrast) {
-        // Desactivar el alto contraste
-        document.body.style.backgroundColor = ''; // Restaurar color de fondo predeterminado
-        document.body.style.color = ''; // Restaurar color de texto predeterminado
+        document.body.style.backgroundColor = '';
+        document.body.style.color = '';
         saveStateToLocalStorage('highContrastState', false);
     } else {
-        // Activar el alto contraste
-        // Puedes cambiar los colores de fondo y texto según tus necesidades
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'white';
         saveStateToLocalStorage('highContrastState', true);
     }
 
-    // Toggle the 'seleccionada' class on the high contrast button
     highContrastButton.classList.toggle('seleccionada');
 });
 
 function changeFontSize(action) {
     const currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
     let newSize = parseFloat(currentSize);
-    
+
     if (action === 'increase') {
         newSize *= 1.2;
     } else if (action === 'decrease') {
         newSize /= 1.2;
     }
-    
+
     document.body.style.fontSize = newSize + 'px';
     saveStateToLocalStorage('fontSizeState', newSize);
 }
