@@ -14,17 +14,17 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ ✓</a></li>
-            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ ✓</a></li>
-            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ ✓</a></li>
-            <li><a href="#">Alto contraste 👁 ✗</a></li>
-            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
-            <li><a href="#">Fondo claro ☀ ✗</a></li>
-            <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ </a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ </a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ </a></li>
+            <li><a href="#" id="highContrastButton">Alto contraste 👁 </a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ </a></li>
+            <li><a href="#" id="lightBackgroundButton">Fondo claro ☀ </a></li>
+            <li><a href="#" id="readableFontButton">Fuente legible ✎ </a></li>
             <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
-            <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
+            <li><a href="#" id="resetButton">Reset ⭮ </a></li>
         </ul>
-    </div>
+    </div>   
 
     <button id="toggleButton">
         <img src="Imagenes/deductivo/accesibilidad.png" style="width: 40px; height: 40px;">
@@ -67,25 +67,7 @@
 
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contentToRead = document.querySelector('.contenedor-titulos-index');
-            const readAloudButton = document.getElementById('readAloudButton');
-
-            readAloudButton.addEventListener('click', function () {
-                const textToRead = contentToRead.innerText;
-
-                const speech = new SpeechSynthesisUtterance(textToRead);
-
-                // Cambié el idioma a español chileno ('es-CL')
-                speech.lang = 'es-CL';
-
-                speech.rate = 0.7;
-
-                speechSynthesis.speak(speech);
-            });
-        });
-    </script>
+    <script src="JS/lector.js"></script>
 
     <div>
         <a href="Atencion_y_concentracion/Seccion-1-1.html" class="siguiente">Siguiente ▶</a>

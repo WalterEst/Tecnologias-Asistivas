@@ -14,17 +14,17 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ ✓</a></li>
-            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ ✓</a></li>
-            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ ✓</a></li>
-            <li><a href="#">Alto contraste 👁 ✗</a></li>
-            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
-            <li><a href="#">Fondo claro ☀ ✗</a></li>
-            <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ </a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ </a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ </a></li>
+            <li><a href="#" id="highContrastButton">Alto contraste 👁 </a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ </a></li>
+            <li><a href="#" id="lightBackgroundButton">Fondo claro ☀ </a></li>
+            <li><a href="#" id="readableFontButton">Fuente legible ✎ </a></li>
             <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
-            <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
+            <li><a href="#" id="resetButton">Reset ⭮ </a></li>
         </ul>
-    </div>
+    </div>   
 
     <button id="toggleButton">
         <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
@@ -55,30 +55,7 @@
         <a href="Q-1.html" class="siguiente">Comenzar ▶</a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contentToRead = document.querySelectorAll('.titulo, .enunciado');
-            const readAloudButton = document.getElementById('readAloudButton');
-
-            readAloudButton.addEventListener('click', function () {
-                let textToRead = '';
-
-                // Concatenar el texto de ambas clases
-                contentToRead.forEach(element => {
-                    textToRead += element.innerText + ' ';
-                });
-
-                const speech = new SpeechSynthesisUtterance(textToRead);
-
-                // Cambié el idioma a español chileno ('es-CL')
-                speech.lang = 'es-CL';
-
-                speech.rate = 0.7;
-
-                speechSynthesis.speak(speech);
-            });
-        });
-    </script>
+    <script src="../JS/lector.js"></script>
 </body>
 
 </html>

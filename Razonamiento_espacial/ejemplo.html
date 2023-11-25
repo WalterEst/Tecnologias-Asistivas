@@ -81,24 +81,7 @@
         <a href="Q-1.html" class="siguiente">Comenzar ▶</a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contentToRead = document.querySelector('.bloque-enunciado');
-            const readAloudButton = document.getElementById('readAloudButton');
-
-            readAloudButton.addEventListener('click', function () {
-                const textToRead = contentToRead.innerText;
-
-                const speech = new SpeechSynthesisUtterance(textToRead);
-
-                speech.lang = 'es-CL';
-
-                speech.rate = 0.7; 
-
-                speechSynthesis.speak(speech);
-            });
-        });
-    </script>
+    <script src="../JS/lector.js"></script>
 </body>
 
 </html>

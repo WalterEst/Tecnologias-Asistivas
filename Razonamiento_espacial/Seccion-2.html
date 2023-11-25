@@ -49,24 +49,6 @@
         <a href="ejemplo.html" class="siguiente">Siguiente ▶</a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const contentToRead = document.querySelector('.bloque-enunciado');
-            const readAloudButton = document.getElementById('readAloudButton');
-
-            readAloudButton.addEventListener('click', function () {
-                const textToRead = contentToRead.innerText;
-
-                const speech = new SpeechSynthesisUtterance(textToRead);
-
-                // Cambié el idioma a español chileno ('es-CL')
-                speech.lang = 'es-CL';
-
-                speech.rate = 0.7; 
-
-                speechSynthesis.speak(speech);
-            });
-        });
-    </script>
+    <script src="../JS/lector.js"></script>
 </body>
 </html>
