@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
     <title>ATENCION Y CONCENTRACION</title>
 </head>
+
 <body>
 
     <div class="sidebar" id="sidebar">
@@ -20,6 +22,7 @@
             <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
             <li><a href="#">Fondo claro ☀ ✗</a></li>
             <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
             <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
         </ul>
     </div>
@@ -40,9 +43,8 @@
                 rápido posible. Sigue el ejemplo. Tienes <b>1 MINUTO</b> para responder. Cuando pase el
                 tiempo, la actividad se parará y pasaremos a la siguiente actividad.</p><br>
                 
-                <h2 class="titulo-ejemplo">Ejemplo</h2>
+            <h2 class="titulo-ejemplo">Ejemplo</h2>
         </div>
-
 
     </div>
 
@@ -78,5 +80,26 @@
         <a href="Q-2.html" class="siguiente">Siguiente ▶</a>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contentToRead = document.querySelector('.bloque-enunciado');
+            const readAloudButton = document.getElementById('readAloudButton');
+
+            readAloudButton.addEventListener('click', function () {
+                const textToRead = contentToRead.innerText;
+
+                const speech = new SpeechSynthesisUtterance(textToRead);
+
+                // Cambié el idioma a español chileno ('es-CL')
+                speech.lang = 'es-CL';
+
+                speech.rate = 0.7;
+
+                speechSynthesis.speak(speech);
+            });
+        });
+    </script>
+
 </body>
+
 </html>

@@ -1,3 +1,5 @@
+// scripts.js
+
 const sidebar = document.getElementById('sidebar');
 const toggleButton = document.getElementById('toggleButton');
 const invertColorsButton = document.getElementById('invertColorsButton');
@@ -5,6 +7,9 @@ const increaseFontSizeButton = document.getElementById('increaseFontSizeButton')
 const decreaseFontSizeButton = document.getElementById('decreaseFontSizeButton');
 const grayscaleButton = document.getElementById('grayscaleButton');
 const resetButton = document.getElementById('resetButton');
+const lightBackgroundButton = document.getElementById('lightBackgroundButton');
+const readableFontButton = document.getElementById('readableFontButton');
+const highContrastButton = document.getElementById('highContrastButton');
 
 document.addEventListener('DOMContentLoaded', () => {
     restoreStateFromLocalStorage();
@@ -32,6 +37,33 @@ grayscaleButton.addEventListener('click', () => {
     toggleGrayscale();
 });
 
+lightBackgroundButton.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+    saveStateToLocalStorage('lightBackgroundState', true);
+});
+
+readableFontButton.addEventListener('click', () => {
+    // Cambié la fuente a 'Verdana', ya que es conocida por su legibilidad en pantalla
+    document.body.style.fontFamily = 'Verdana, Arial, sans-serif';
+    // Establecí un tamaño de fuente más grande para mejorar la legibilidad
+    document.body.style.fontSize = '18px';
+    // Ajusté el espaciado de línea para mejorar la legibilidad
+    document.body.style.lineHeight = '1.6';
+    // Establecí un margen lateral para mejorar la legibilidad
+    document.body.style.marginLeft = '20px';
+    // Guardé el estado en el almacenamiento local
+    saveStateToLocalStorage('readableFontState', true);
+});
+
+highContrastButton.addEventListener('click', () => {
+    // Lógica para activar el alto contraste
+    // Puedes cambiar los colores de fondo y texto según tus necesidades
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+    saveStateToLocalStorage('highContrastState', true);
+});
+
 function changeFontSize(action) {
     const currentSize = window.getComputedStyle(document.body, null).getPropertyValue('font-size');
     let newSize = parseFloat(currentSize);
@@ -57,7 +89,6 @@ function toggleGrayscale() {
     }
 }
 
-
 function saveStateToLocalStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
@@ -67,6 +98,9 @@ function restoreStateFromLocalStorage() {
     restoreElementState('invertColorsState', document.documentElement, 'invert-colors');
     restoreFontSizeState();
     restoreGrayscaleState();
+    restoreLightBackgroundState();
+    restoreReadableFontState();
+    restoreHighContrastState();
 }
 
 function restoreFontSizeState() {
@@ -80,6 +114,32 @@ function restoreGrayscaleState() {
     const isGrayscale = JSON.parse(localStorage.getItem('grayscaleState'));
     if (isGrayscale) {
         document.documentElement.classList.add('grayscale');
+    }
+}
+
+function restoreLightBackgroundState() {
+    const hasLightBackground = JSON.parse(localStorage.getItem('lightBackgroundState'));
+    if (hasLightBackground) {
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+    }
+}
+
+function restoreReadableFontState() {
+    const hasReadableFont = JSON.parse(localStorage.getItem('readableFontState'));
+    if (hasReadableFont) {
+        document.body.style.fontFamily = 'Verdana, Arial, sans-serif';
+        document.body.style.fontSize = '18px';
+        document.body.style.lineHeight = '1.6';
+        document.body.style.marginLeft = '20px';
+    }
+}
+
+function restoreHighContrastState() {
+    const isHighContrast = JSON.parse(localStorage.getItem('highContrastState'));
+    if (isHighContrast) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
     }
 }
 

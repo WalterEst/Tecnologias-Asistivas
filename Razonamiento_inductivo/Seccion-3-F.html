@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
     <title>Finalizando seccion</title>
 </head>
+
 <body>
 
     <div class="sidebar" id="sidebar">
@@ -18,13 +20,14 @@
             <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
             <li><a href="#">Fondo claro ☀ ✗</a></li>
             <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
             <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
         </ul>
     </div>
 
     <button id="toggleButton">
         <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
-      </button>
+    </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="finalizacion">
@@ -35,5 +38,26 @@
         <a href="../Razonamiento_deductivo/Seccion-4-1.html" class="siguiente">Siguiente ▶</a>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contentToRead = document.querySelector('.finalizacion');
+            const readAloudButton = document.getElementById('readAloudButton');
+
+            readAloudButton.addEventListener('click', function () {
+                const textToRead = contentToRead.innerText;
+
+                const speech = new SpeechSynthesisUtterance(textToRead);
+
+                // Cambié el idioma a español chileno ('es-CL')
+                speech.lang = 'es-CL';
+
+                speech.rate = 0.7;
+
+                speechSynthesis.speak(speech);
+            });
+        });
+    </script>
+
 </body>
+
 </html>

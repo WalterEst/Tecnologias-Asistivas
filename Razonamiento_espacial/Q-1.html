@@ -21,63 +21,61 @@
             <span class="time"></span>
         </div>
     </div>
-<script>var hr = document.getElementById("hr");
-    var min = document.getElementById("min");
-    
-    var totalSeconds = 2 * 60; // 1 minuto a segundos
-    
-    var interval = setInterval(() => {
-        var minutes = Math.floor(totalSeconds / 60);
-        var seconds = totalSeconds % 60;
-    
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-    
-        hr.innerHTML = minutes;
-        min.innerHTML = seconds;
-    
-        if (totalSeconds <= 0) {
-            clearInterval(interval);
-            window.location.href = "Q-2.html";
-            alert("Tiempo finalizado");
-        }
-    
-        totalSeconds--;
-    }, 1000);</script>
+    <script>
+        var hr = document.getElementById("hr");
+        var min = document.getElementById("min");
 
+        var totalSeconds = 2 * 60; // 1 minuto a segundos
 
+        var interval = setInterval(() => {
+            var minutes = Math.floor(totalSeconds / 60);
+            var seconds = totalSeconds % 60;
 
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            hr.innerHTML = minutes;
+            min.innerHTML = seconds;
+
+            if (totalSeconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "Q-2.html";
+                alert("Tiempo finalizado");
+            }
+
+            totalSeconds--;
+        }, 1000);
+    </script>
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ ✓</a></li>
-            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ ✓</a></li>
-            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ ✓</a></li>
-            <li><a href="#">Alto contraste 👁 ✗</a></li>
-            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
-            <li><a href="#">Fondo claro ☀ ✗</a></li>
-            <li><a href="#">Fuente legible ✎ ✗</a></li>
-            <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ </a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ </a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ </a></li>
+            <li><a href="#" id="highContrastButton">Alto contraste 👁 </a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ </a></li>
+            <li><a href="#" id="lightBackgroundButton">Fondo claro ☀ </a></li>
+            <li><a href="#" id="readableFontButton">Fuente legible ✎ </a></li>
+            <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
+            <li><a href="#" id="resetButton">Reset ⭮ </a></li>
         </ul>
-    </div>
+    </div>   
 
     <button id="toggleButton">
         <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
-      </button>
+    </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="bloque-enunciado">
-
         <h1 class="titulo-seccion"> </h1>
         <p class="enunciado">Si la figura que se muestra abajo es rotada 360 grados hacia la <b>izquierda</b></p>
         <div>
             <img src="../Imagenes/espacial/Imagen9.png">
         </div>
-
         <p class="enunciado">¿Cuál de las siguientes figuras muestra el resultado de la rotación?</p>
     </div>   
     <div class="centrar-alternativa">
@@ -85,9 +83,6 @@
         <div class="alternativa" id="alternativa-a">
             <div class="imagen-container">
                 <img src="../Imagenes/espacial/Imagen10.png" class="imagen-alternativa" id="imagen-a">
-                <div class="overlay" id="overlay-a">
-                    <img src="../Imagenes/espacial/X.png" class="marca-x">
-                </div>
             </div>
         </div>
         
@@ -95,9 +90,6 @@
         <div class="alternativa" id="alternativa-b">
             <div class="imagen-container">
                 <img src="../Imagenes/espacial/Imagen11.png" class="imagen-alternativa" id="imagen-b">
-                <div class="overlay" id="overlay-b">
-                    <img src="../Imagenes/espacial/X.png" class="marca-x">
-                </div>
             </div>
         </div>
         
@@ -105,9 +97,6 @@
         <div class="alternativa" id="alternativa-c">
             <div class="imagen-container">
                 <img src="../Imagenes/espacial/Imagen12.png" class="imagen-alternativa" id="imagen-c">
-                <div class="overlay" id="overlay-c">
-                    <img src="../Imagenes/espacial/X.png" class="marca-x">
-                </div>
             </div>
         </div>
         
@@ -115,12 +104,8 @@
         <div class="alternativa" id="alternativa-d">
             <div class="imagen-container">
                 <img src="../Imagenes/espacial/Imagen13.png" class="imagen-alternativa" id="imagen-d">
-                <div class="overlay" id="overlay-d">
-                    <img src="../Imagenes/espacial/X.png" class="marca-x">
-                </div>
             </div>
-        </div>
-                
+        </div>        
     </div>
     
     <div>
@@ -141,7 +126,27 @@
         alternativas.forEach(alternativa => {
             alternativa.addEventListener('click', handleAlternativaClick);
         });
-    </script>     
+    </script>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contentToRead = document.querySelector('.bloque-enunciado');
+            const readAloudButton = document.getElementById('readAloudButton');
+
+            readAloudButton.addEventListener('click', function () {
+                const textToRead = contentToRead.innerText;
+
+                const speech = new SpeechSynthesisUtterance(textToRead);
+
+                // Cambié el idioma a español chileno ('es-CL')
+                speech.lang = 'es-CL';
+
+                speech.rate = 0.7; 
+
+                speechSynthesis.speak(speech);
+            });
+        });
+    </script>
+
 </body>
 </html>

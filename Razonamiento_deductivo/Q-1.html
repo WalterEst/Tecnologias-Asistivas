@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
     <link rel="icon" type="image/png" href="../Imagenes/index/Favicon.png"/>
     <title>Razonamiento Deductivo</title>
 </head>
+
 <body>
 
-     <div class="d-clock">
+    <div class="d-clock">
         <div class="inner-circle">
             <div>
                 <span id="hr">05</span>
@@ -21,278 +23,292 @@
             <span class="time"></span>
         </div>
     </div>
-<script>var hr = document.getElementById("hr");
-    var min = document.getElementById("min");
-    
-    var totalSeconds = 5 * 60; // 1 minuto a segundos
-    
-    var interval = setInterval(() => {
-        var minutes = Math.floor(totalSeconds / 60);
-        var seconds = totalSeconds % 60;
-    
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-    
-        hr.innerHTML = minutes;
-        min.innerHTML = seconds;
-    
-        if (totalSeconds <= 0) {
-            clearInterval(interval);
-            window.location.href = "Seccion-4-F.html";
-            alert("Tiempo finalizado");
-        }
-    
-        totalSeconds--;
-    }, 1000);</script>
 
+    <script>
+        var hr = document.getElementById("hr");
+        var min = document.getElementById("min");
 
-  <div class="sidebar" id="sidebar">
-    <ul>
-        <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ ✓</a></li>
-        <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ ✓</a></li>
-        <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ ✓</a></li>
-        <li><a href="#">Alto contraste 👁 ✗</a></li>
-        <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
-        <li><a href="#">Fondo claro ☀ ✗</a></li>
-        <li><a href="#">Fuente legible ✎ ✗</a></li>
-        <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
-    </ul>
-  </div>
+        var totalSeconds = 5 * 60; // 5 minutos a segundos
+
+        var interval = setInterval(() => {
+            var minutes = Math.floor(totalSeconds / 60);
+            var seconds = totalSeconds % 60;
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+            hr.innerHTML = minutes;
+            min.innerHTML = seconds;
+
+            if (totalSeconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "Seccion-4-F.html";
+                alert("Tiempo finalizado");
+            }
+
+            totalSeconds--;
+        }, 1000);
+    </script>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#" id="increaseFontSizeButton">Aumentar el texto ↑ ✓</a></li>
+            <li><a href="#" id="decreaseFontSizeButton">Disminuir el texto ↓ ✓</a></li>
+            <li><a href="#" id="grayscaleButton">Escala de grises ‖‖‖ ✓</a></li>
+            <li><a href="#">Alto contraste 👁 ✗</a></li>
+            <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
+            <li><a href="#">Fondo claro ☀ ✗</a></li>
+            <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
+            <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
+        </ul>
+    </div>
 
     <button id="toggleButton">
-      <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
+        <img src="../Imagenes/deductivo/accesibilidad.png" alt="Icono de accesibilidad" style="width: 40px; height: 40px;">
     </button>
     <script src="../JS/sidebar.js"></script>
 
     <div class="bloque-enunciado">
 
-      <h1 style="background-color: grey; padding: 10px; border-radius: 14px; ">RAZONAMIENTO DEDUCTIVO</h1>
+        <h1 style="background-color: grey; padding: 10px; border-radius: 14px; ">RAZONAMIENTO DEDUCTIVO</h1>
 
-      <h1 class="titulo-seccion"> </h1>
-      <p class="enunciado"><b>INSTRUCCIONES: Ahora resolveremos 10 tareas que tienen relación con el Razonamiento
-          deductivo.</b><br>
-          -  Lee atentamente cada enunciado y presta atención a las frases en <b>negrita</b> de cada
-          ejercicio para encontrar la respuesta. <br>
-          - Encierra en un círculo la alternativa correcta considerando la V si es <b>Verdadera</b> y F si es <b>Falsa</b>. <br>
-          - Tienes 5 minutos para responder.</p>    
+        <h1 class="titulo-seccion"> </h1>
+        <p class="enunciado"><b>INSTRUCCIONES: Ahora resolveremos 10 tareas que tienen relación con el Razonamiento
+                deductivo.</b><br>
+            - Lee atentamente cada enunciado y presta atención a las frases en <b>negrita</b> de cada ejercicio para
+            encontrar la respuesta. <br>
+            - Encierra en un círculo la alternativa correcta considerando la V si es <b>Verdadera</b> y F si es <b>Falsa</b>.
+            <br>
+            - Tienes 5 minutos para responder.</p>
         <br>
-  </head>
-  <body>
-  
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-        .true-false-btn {
-          cursor: pointer;
-        }
-      </style>
-    </head>
-    <body>
-    
-    <table>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>
-            - El hijo de mi tía es mi primo.
-            <br>
-            - Gastón es hijo de mi tía.
-            <br>
-            <b>- Gastón es mi tío.</b>
-          </td>
-          <td>
-            <input type="radio" id="q1_true" name="q1" value="V" style="display: none;">
-            <label for="q1_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q1_false" name="q1" value="F" style="display: none;">
-            <label for="q1_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>2</td>
-          <td>
-            - El 01 de mayo es feriado irrenunciable.
-            <br>
-            - Hoy es 01 de mayo.
-            <br>
-            <b>- Hoy debo trabajar.</b>
-          </td>
-          <td>
-            <input type="radio" id="q2_true" name="q2" value="V" style="display: none;">
-            <label for="q2_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q2_false" name="q2" value="F" style="display: none;">
-            <label for="q2_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>3</td>
-          <td>
-            - Los limones verdes no han madurado.
-            <br>
-            - Este limón está amarillo.
-            <br>
-            <b>- Este limón no ha madurado.</b>
-          </td>
-          <td>
-            <input type="radio" id="q3_true" name="q3" value="V" style="display: none;">
-            <label for="q3_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q3_false" name="q3" value="F" style="display: none;">
-            <label for="q3_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>4</td>
-          <td>
-            - La edad mínima para inscribirse en la escuela es de cinco años.
-            <br>
-            - Juana tiene cuatro hijos.
-            <br>
-            <b>- Juana puede ser inscrita en la escuela.</b>
-          </td>
-          <td>
-            <input type="radio" id="q4_true" name="q4" value="V" style="display: none;">
-            <label for="q4_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q4_false" name="q4" value="F" style="display: none;">
-            <label for="q4_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>5</td>
-          <td>
-            - Las plantas necesitan agua para vivir.
-            <br>
-            - Los girasoles son plantas.
-            <br>
-            <b>- Los girasoles necesitan agua para vivir. </b>
-          </td>
-          <td>
-            <input type="radio" id="q5_true" name="q5" value="V" style="display: none;">
-            <label for="q5_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q5_false" name="q5" value="F" style="display: none;">
-            <label for="q5_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>6</td>
-          <td>
-            - Los relámpagos anticipan un trueno.
-            <br>
-            - Hoy hubo un relámpago.
-            <br>
-            <b>- Ya no vendrá un trueno.</b>
-          </td>
-          <td>
-            <input type="radio" id="q6_true" name="q6" value="V" style="display: none;">
-            <label for="q6_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q6_false" name="q6" value="F" style="display: none;">
-            <label for="q6_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>7</td>
-          <td>
-            - Las galletas tardan 45 minutos en hornearse.
-            <br>
-            - Son las 3:00 PM y María mete las galletas al horno.
-            <br>
-            <b>- Las galletas estarán listas a las 4:00 PM.</b>
-          </td>
-          <td>
-            <input type="radio" id="q7_true" name="q7" value="V" style="display: none;">
-            <label for="q7_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q7_false" name="q7" value="F" style="display: none;">
-            <label for="q7_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>8</td>
-          <td>
-            - Todos los miércoles John sale 10 minutos antes de su trabajo.
-            <br>
-            - Hoy es miércoles.
-            <br>
-            <b>- Hoy John saldrá 25 minutos antes del trabajo.</b>
-          </td>
-          <td>
-            <input type="radio" id="q8_true" name="q8" value="V" style="display: none;">
-            <label for="q8_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q8_false" name="q8" value="F" style="display: none;">
-            <label for="q8_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>9</td>
-          <td>
-            - Todas las bacterias son organismos unicelulares.
-            <br>
-            - La Escherichia coli es una bacteria.
-            <br>
-            <b>- La Escherichia coli es un organismo unicelular.</b>
-          </td>
-          <td>
-            <input type="radio" id="q9_true" name="q9" value="V" style="display: none;">
-            <label for="q9_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q9_false" name="q9" value="F" style="display: none;">
-            <label for="q9_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-    
-        <tr>
-          <td>10</td>
-          <td>
-            - Todos los hijos de Juana tienen los ojos color café.
-            <br>
-            - Lucía y Pablo son hijos de Juana.
-            <br>
-            <b>- Lucía tiene los ojos color café.</b>
-          </td>
-          <td>
-            <input type="radio" id="q10_true" name="q10" value="V" style="display: none;">
-            <label for="q10_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
-          </td>
-          <td>
-            <input type="radio" id="q10_false" name="q10" value="F" style="display: none;">
-            <label for="q10_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
-    <div>
-      <a href="Seccion-4-F.html" class="siguiente">Siguiente ▶</a>
-  </div>
-
-</body>
-</html>
+        <table>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        - El hijo de mi tía es mi primo.
+                        <br>
+                        - Gastón es hijo de mi tía.
+                        <br>
+                        <b>- Gastón es mi tío.</b>
+                    </td>
+                    <td>
+                        <input type="radio" id="q1_true" name="q1" value="V" style="display: none;">
+                        <label for="q1_true" class="true-false-btn"><img
+                                src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                    </td>
+                    <td>
+                        <input type="radio" id="q1_false" name="q1" value="F" style="display: none;">
+                        <label for="q1_false" class="true-false-btn"><img
+                                src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                    </td>
+                </tr>
+    
+                <tr>
+                  <td>2</td>
+                  <td>
+                    - El 01 de mayo es feriado irrenunciable.
+                    <br>
+                    - Hoy es 01 de mayo.
+                    <br>
+                    <b>- Hoy debo trabajar.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q2_true" name="q2" value="V" style="display: none;">
+                    <label for="q2_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q2_false" name="q2" value="F" style="display: none;">
+                    <label for="q2_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>3</td>
+                  <td>
+                    - Los limones verdes no han madurado.
+                    <br>
+                    - Este limón está amarillo.
+                    <br>
+                    <b>- Este limón no ha madurado.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q3_true" name="q3" value="V" style="display: none;">
+                    <label for="q3_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q3_false" name="q3" value="F" style="display: none;">
+                    <label for="q3_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>4</td>
+                  <td>
+                    - La edad mínima para inscribirse en la escuela es de cinco años.
+                    <br>
+                    - Juana tiene cuatro hijos.
+                    <br>
+                    <b>- Juana puede ser inscrita en la escuela.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q4_true" name="q4" value="V" style="display: none;">
+                    <label for="q4_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q4_false" name="q4" value="F" style="display: none;">
+                    <label for="q4_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>5</td>
+                  <td>
+                    - Las plantas necesitan agua para vivir.
+                    <br>
+                    - Los girasoles son plantas.
+                    <br>
+                    <b>- Los girasoles necesitan agua para vivir. </b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q5_true" name="q5" value="V" style="display: none;">
+                    <label for="q5_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q5_false" name="q5" value="F" style="display: none;">
+                    <label for="q5_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>6</td>
+                  <td>
+                    - Los relámpagos anticipan un trueno.
+                    <br>
+                    - Hoy hubo un relámpago.
+                    <br>
+                    <b>- Ya no vendrá un trueno.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q6_true" name="q6" value="V" style="display: none;">
+                    <label for="q6_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q6_false" name="q6" value="F" style="display: none;">
+                    <label for="q6_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>7</td>
+                  <td>
+                    - Las galletas tardan 45 minutos en hornearse.
+                    <br>
+                    - Son las 3:00 PM y María mete las galletas al horno.
+                    <br>
+                    <b>- Las galletas estarán listas a las 4:00 PM.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q7_true" name="q7" value="V" style="display: none;">
+                    <label for="q7_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q7_false" name="q7" value="F" style="display: none;">
+                    <label for="q7_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>8</td>
+                  <td>
+                    - Todos los miércoles John sale 10 minutos antes de su trabajo.
+                    <br>
+                    - Hoy es miércoles.
+                    <br>
+                    <b>- Hoy John saldrá 25 minutos antes del trabajo.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q8_true" name="q8" value="V" style="display: none;">
+                    <label for="q8_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q8_false" name="q8" value="F" style="display: none;">
+                    <label for="q8_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>9</td>
+                  <td>
+                    - Todas las bacterias son organismos unicelulares.
+                    <br>
+                    - La Escherichia coli es una bacteria.
+                    <br>
+                    <b>- La Escherichia coli es un organismo unicelular.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q9_true" name="q9" value="V" style="display: none;">
+                    <label for="q9_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q9_false" name="q9" value="F" style="display: none;">
+                    <label for="q9_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+            
+                <tr>
+                  <td>10</td>
+                  <td>
+                    - Todos los hijos de Juana tienen los ojos color café.
+                    <br>
+                    - Lucía y Pablo son hijos de Juana.
+                    <br>
+                    <b>- Lucía tiene los ojos color café.</b>
+                  </td>
+                  <td>
+                    <input type="radio" id="q10_true" name="q10" value="V" style="display: none;">
+                    <label for="q10_true" class="true-false-btn"><img src="../Imagenes/deductivo/verdadero.PNG" alt="Verdadero"></label>
+                  </td>
+                  <td>
+                    <input type="radio" id="q10_false" name="q10" value="F" style="display: none;">
+                    <label for="q10_false" class="true-false-btn"><img src="../Imagenes/deductivo/falso.PNG" alt="Falso"></label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+    
+            <div>
+                <a href="Seccion-4-F.html" class="siguiente">Siguiente ▶</a>
+            </div>
+    
+        </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const contentToRead = document.querySelector('.bloque-enunciado');
+                const readAloudButton = document.getElementById('readAloudButton');
+    
+                readAloudButton.addEventListener('click', function () {
+                    const textToRead = contentToRead.innerText;
+    
+                    const speech = new SpeechSynthesisUtterance(textToRead);
+    
+                    // Cambié el idioma a español chileno ('es-CL')
+                    speech.lang = 'es-CL';
+    
+                    speech.rate = 0.7;
+    
+                    speechSynthesis.speak(speech);
+                });
+            });
+        </script>
+    
+    </body>
+    
+    </html>

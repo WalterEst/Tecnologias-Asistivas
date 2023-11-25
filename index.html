@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="es"">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="icon" type="image/png" href="Imagenes/index/Favicon.png"/>
+    <link rel="icon" type="image/png" href="Imagenes/index/Favicon.png" />
     <title>Pagina principal</title>
 </head>
+
 <body>
 
     <div class="sidebar" id="sidebar">
@@ -19,17 +21,17 @@
             <li><a href="#" id="invertColorsButton">Invertir Colores ◑ ✓</a></li>
             <li><a href="#">Fondo claro ☀ ✗</a></li>
             <li><a href="#">Fuente legible ✎ ✗</a></li>
+            <li><a href="#" id="readAloudButton">Leer en voz alta 🔊</a></li>
             <li><a href="#" id="resetButton">Reset ⭮ ✓</a></li>
         </ul>
     </div>
 
     <button id="toggleButton">
-        <img src="Imagenes/deductivo/accesibilidad.png"style="width: 40px; height: 40px;">
-      </button>
+        <img src="Imagenes/deductivo/accesibilidad.png" style="width: 40px; height: 40px;">
+    </button>
     <script src="JS/sidebar.js"></script>
 
-
-    <div class = "contenedor-titulos-index">
+    <div class="contenedor-titulos-index">
 
         <h1>CAPACIDADES GENERALES</h1>
         <h2>BASE DE RAZONAMIENTO Y CONCENTRACIÓN</h2>
@@ -59,16 +61,36 @@
             </form>
         </div>
 
-        </form>
-        <?php 
+        <?php
         include("registrar.php");
         ?>
-        
+
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contentToRead = document.querySelector('.contenedor-titulos-index');
+            const readAloudButton = document.getElementById('readAloudButton');
+
+            readAloudButton.addEventListener('click', function () {
+                const textToRead = contentToRead.innerText;
+
+                const speech = new SpeechSynthesisUtterance(textToRead);
+
+                // Cambié el idioma a español chileno ('es-CL')
+                speech.lang = 'es-CL';
+
+                speech.rate = 0.7;
+
+                speechSynthesis.speak(speech);
+            });
+        });
+    </script>
 
     <div>
         <a href="Atencion_y_concentracion/Seccion-1-1.html" class="siguiente">Siguiente ▶</a>
     </div>
 
 </body>
+
 </html>
