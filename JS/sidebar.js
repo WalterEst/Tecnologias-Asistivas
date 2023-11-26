@@ -74,12 +74,22 @@ highContrastButton.addEventListener('click', () => {
     const isHighContrast = highContrastButton.classList.contains('seleccionada');
 
     if (isHighContrast) {
+        // Restaurar los estilos originales
+        document.body.style.backgroundImage = ''; // Restaurar la imagen de fondo original
         document.body.style.backgroundColor = '';
         document.body.style.color = '';
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(title => {
+            title.style.color = ''; // Restaurar el color original de los títulos
+        });
         saveStateToLocalStorage('highContrastState', false);
     } else {
+        // Aplicar estilos de alto contraste
+        document.body.style.backgroundImage = 'url("Imagenes/index/Fondocontraste.png")'; // Cambiar la imagen de fondo
         document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
+        document.body.style.color = 'white'; // Establecer el color blanco para el texto del cuerpo
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(title => {
+            title.style.color = 'white'; // Establecer el color blanco para los títulos
+        });
         saveStateToLocalStorage('highContrastState', true);
     }
 
@@ -160,11 +170,24 @@ function restoreReadableFontState() {
 function restoreHighContrastState() {
     const isHighContrast = JSON.parse(localStorage.getItem('highContrastState'));
     if (isHighContrast) {
+        document.body.style.backgroundImage = 'url("Imagenes/index/Fondocontraste.png")';
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'white';
-        highContrastButton.classList.add('seleccionada');
+
+        // Cambiar el filtro de las imágenes
+        document.querySelectorAll('img').forEach(img => {
+            img.style.filter = 'invert(100%)'; // Puedes ajustar el filtro según tus preferencias
+        });
+
+        // Cambiar el color de los títulos
+        document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(title => {
+            title.style.color = 'white';
+        });
+
+        highContrastButton.classList.add('clickeada');
     }
 }
+
 
 function restoreElementState(key, element, className) {
     const savedState = JSON.parse(localStorage.getItem(key));
