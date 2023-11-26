@@ -93,11 +93,7 @@ highContrastButton.addEventListener('click', () => {
         saveStateToLocalStorage('highContrastState', true);
     }
 
-<<<<<<< HEAD
-    highContrastButton.classList.toggle('seleccionada');
-=======
     highContrastButton.classList.toggle('clickeada');
->>>>>>> main
 });
 
 function changeFontSize(action) {
