@@ -71,7 +71,7 @@ readableFontButton.addEventListener('click', () => {
 });
 
 highContrastButton.addEventListener('click', () => {
-    const isHighContrast = highContrastButton.classList.contains('seleccionada');
+    const isHighContrast = highContrastButton.classList.contains('clickeada');
 
     if (isHighContrast) {
         // Restaurar los estilos originales
@@ -93,7 +93,7 @@ highContrastButton.addEventListener('click', () => {
         saveStateToLocalStorage('highContrastState', true);
     }
 
-    highContrastButton.classList.toggle('seleccionada');
+    highContrastButton.classList.toggle('clickeada');
 });
 
 function changeFontSize(action) {
