@@ -186,6 +186,7 @@ function restoreHighContrastState() {
         // Invertir solo los números del reloj
         document.getElementById('hr').style.filter = 'invert(100%)';
         document.getElementById('min').style.filter = 'invert(100%)';
+        document.getElementById('dot').style.filter = 'invert(100%)';
 
         highContrastButton.classList.add('clickeada');
     }
