@@ -65,8 +65,13 @@ body{
 }
 
 .d-clock img {
-    width: 170px; /* Ancho de la imagen del reloj */
+    width: 150px; /* Ancho de la imagen del reloj */
     height: auto; /* Altura automática según el ancho */
+    background-color: #ffffff; 
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #2C87C2;
 }
 
 .time-container {
@@ -74,6 +79,10 @@ body{
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     color: #000000;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #2C87C2;
 }
 
 
