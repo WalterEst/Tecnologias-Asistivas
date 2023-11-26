@@ -22,14 +22,17 @@ body{
 
 .contenedor-imagen-pregunta{
     margin: auto;
-    margin-left: 220px;
+    margin-left: 25%;
+    align-items: center;
     justify-content: center;
 }
 
 .imagen-pregunta{
     margin-bottom: 100px;
-    margin: 100px;
     margin-top: 100px;
+    margin-inline:  20px;
+    padding: 10px;
+    border: 2px solid orange;
 }
 
 .enunciado{
@@ -37,6 +40,7 @@ body{
     font-size: 14;
     text-align: center;
     margin: auto;
+    margin-top: 50px;
     width: 800px;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -55,7 +59,19 @@ body{
 .contenedor-alternativa{
     display:flex;
     justify-content: center;
+    margin-bottom: 50px;
     align-items: center;
+}
+
+.imagen-alternativa{
+    width: 13%;
+    height: 13%;
+    text-align: center;
+    margin: 4%;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 2px solid orange;
 }
 
 input[type="checkbox"] {
@@ -63,14 +79,9 @@ input[type="checkbox"] {
     height: 16px;
 }
 
-
-.imagen-alternativa{
-    width: 10%;
-    height: 10%;
-    text-align: center;
-    margin: 4%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+.imagen-alternativa:hover{
+    
+    cursor: pointer;
 }
 
 .imagen-alternativa2{
@@ -81,58 +92,10 @@ input[type="checkbox"] {
     margin-top: 2%;
     margin-bottom: 2%;
     display: inline-block;
-
-}
-
-.imagen-alternativa:hover{
-    
-    cursor: pointer;
-}
-
-.invert-colors {
-    -webkit-filter: invert(100%);
-   filter: invert(100%);
-}
-
-.sidebar {
-    background-color: #ffffff;
-    width: 200px;
-    height: auto;
-    position: fixed;
-    border-radius: 14px;
-    border: 1px solid #2C87C2;
-    top: 100px;
-    left: 0;
-    transition: transform 0.3s ease-in-out; 
-    transform: translateX(-250px); 
-}
-
-.sidebar.open {
-    transform: translateX(0); 
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
     padding: 10px;
+    border: 2px solid orange;
 }
 
-.sidebar ul li a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 16px;
-}
-
-.sidebar ul li a:hover {
-    cursor: pointer;
-}
-
-.sidebar ul li a:hover {
-    cursor: pointer;
-}
 
 /* Estilos del botón */
 #toggleButton {
@@ -155,34 +118,4 @@ input[type="checkbox"] {
 .content {
     margin-left: 0px;
     padding: 20px;
-}
-
-
-.siguiente{
-    text-decoration: none;
-    position: fixed;
-    float: right;
-    right: 10px;
-    bottom: 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 14px;
-    border: 1px solid #2C87C2;
-}
-.atras{
-    text-decoration: none;
-    position: fixed;
-    float: left;
-    left: 10px;
-    bottom: 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 14px;
-    border: 1px solid #2C87C2;
 }

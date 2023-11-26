@@ -24,7 +24,7 @@ p{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
-
+    
 }
 
 .enunciado{
@@ -69,6 +69,8 @@ p{
 .imagen-alternativa {
     width: 100px; 
     height: auto;
+    padding: 5px;
+    border: 2px solid orange;
 }
 
 .overlay {
