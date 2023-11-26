@@ -65,8 +65,9 @@ body{
 }
 
 .d-clock img {
-    width: 170px; /* Ancho de la imagen del reloj */
+    width: 100px; /* Ancho de la imagen del reloj */
     height: auto; /* Altura automática según el ancho */
+    margin-right: 10px;
 }
 
 .time-container {
@@ -106,7 +107,7 @@ body{
 .sidebar ul li a {
     text-decoration: none;
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .sidebar ul li a:hover {
