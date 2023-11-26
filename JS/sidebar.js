@@ -166,7 +166,6 @@ function restoreReadableFontState() {
         document.body.style.marginLeft = '20px';
     }
 }
-
 function restoreHighContrastState() {
     const isHighContrast = JSON.parse(localStorage.getItem('highContrastState'));
     if (isHighContrast) {
@@ -184,10 +183,13 @@ function restoreHighContrastState() {
             title.style.color = 'white';
         });
 
+        // Invertir solo los números del reloj
+        document.getElementById('hr').style.filter = 'invert(100%)';
+        document.getElementById('min').style.filter = 'invert(100%)';
+
         highContrastButton.classList.add('clickeada');
     }
 }
-
 
 function restoreElementState(key, element, className) {
     const savedState = JSON.parse(localStorage.getItem(key));
