@@ -93,7 +93,11 @@ highContrastButton.addEventListener('click', () => {
         saveStateToLocalStorage('highContrastState', true);
     }
 
+<<<<<<< HEAD
     highContrastButton.classList.toggle('seleccionada');
+=======
+    highContrastButton.classList.toggle('clickeada');
+>>>>>>> main
 });
 
 function changeFontSize(action) {
@@ -186,6 +190,10 @@ function restoreHighContrastState() {
         // Invertir solo los números del reloj
         document.getElementById('hr').style.filter = 'invert(100%)';
         document.getElementById('min').style.filter = 'invert(100%)';
+<<<<<<< HEAD
+=======
+        document.getElementById('dot').style.filter = 'invert(100%)';
+>>>>>>> main
 
         highContrastButton.classList.add('clickeada');
     }
